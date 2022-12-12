@@ -1,5 +1,6 @@
 /*
-  Do not change the line below. If you'd like to run code from this file, you may use the `exampleSongData` variable below to gain access to tickets data. This data is pulled from the `data/songs.js` file.
+  Do not change the line below. If you'd like to run code from this file, you may use the `exampleSongData` variable below to gain access
+  to tickets data. This data is pulled from the `data/songs.js` file.
 
   You may use this data to test your functions. You may assume the shape of the data remains the same but that the values may change.
 
@@ -12,7 +13,11 @@ const exampleSongData = require("../data/songs");
  * Logs out all of the song titles.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  */
-function printAllSongTitles(songs) {}
+function printAllSongTitles(songs) {
+songs.forEach((song) => {
+    console.log(song.title)
+  });
+}
 
 /**
  * Logs out the song title and song artist.
