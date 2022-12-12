@@ -18,7 +18,6 @@ function getSongTitles(songs) {
   let arrOfTitles = songs.map((song) => 
     song.title
 )
-
   return arrOfTitles
 }
 
@@ -31,7 +30,11 @@ function getSongTitles(songs) {
  *  getSongDetails(songs);
  *  //> [ "Berlin Tsukin by Taiyo Ky", "Up by Sebastian Kamae", ... ]
  */
-function getSongDetails(songs) {}
+function getSongDetails(songs) {
+  let newArr = songs.map((song) => song.title + " by " + song.artist)
+
+  return newArr
+}
 
 /**
  * Returns an array of objects, where each object has a key that is the song title and has a value that is the song artist.
@@ -42,7 +45,12 @@ function getSongDetails(songs) {}
  *  getTitleAndArtist(songs);
  *  //> [ { "Berlin Tsukin": "Taiyo Ky" }, { Up: "Sebastian Kamae" }, ... ]
  */
-function getTitleAndArtist(songs) {}
+function getTitleAndArtist(songs) {
+  return objectsArr = songs.map((song) => {
+    return {[song.title]: song.artist}})
+
+  //return objectsArr
+}
 
 module.exports = {
   getSongTitles,
